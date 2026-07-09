@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Exercise 1 -->
+    <bean id="hello" class="com.example.HelloWorld"/>
+
+    <!-- Exercise 2 -->
+    <bean id="address" class="com.example.Address">
+        <constructor-arg value="Hyderabad"/>
+    </bean>
+
+    <bean id="employee" class="com.example.Employee">
+        <constructor-arg ref="address"/>
+    </bean>
+
+</beans>
